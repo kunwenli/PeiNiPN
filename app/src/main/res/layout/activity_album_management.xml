@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorf9f9f9">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@mipmap/back"/>
+
+            <TextView
+                android:id="@+id/mi_image_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="我的照片"
+                android:textColor="@color/text333"
+                android:textSize="@dimen/textSize18"/>
+
+            <Button
+                android:id="@+id/mi_image_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:text="管理"
+                android:textColor="@color/text333"
+                android:textSize="@dimen/textSize16"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/viewcdcdcd"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mi_photo_manage"
+            android:layout_width="match_parent"
+            android:background="@color/white000"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/album_upload"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/RED_FB4E30"
+            android:gravity="center"
+            android:text="上传图片"
+            android:textColor="@color/white000"
+            android:textSize="@dimen/textSize18"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/album_delete"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/album_delete_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/white000"
+                android:gravity="center"
+                android:text="已选择 5 张照片"
+                android:textColor="@color/text333"
+                android:textSize="@dimen/textSize18"/>
+
+            <TextView
+                android:id="@+id/album_delete_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:background="@color/RED_FB4E30"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/white000"
+                android:textSize="@dimen/textSize18"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

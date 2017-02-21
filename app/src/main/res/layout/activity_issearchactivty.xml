@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_issearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/search_toolbar"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/search_bj"
+            android:clickable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/issearch_search"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/search"/>
+
+            <EditText
+                android:id="@+id/phone_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:hint="请输入要搜索的店铺名称"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/textSize15"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/issearch_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="@color/red"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/search_pop_xia"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view"/>
+
+    <FrameLayout
+        android:id="@+id/search_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/issearch_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/view"/>
+
+            <Button
+                android:id="@+id/search_delete_sq"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:text="清空搜索记录"
+                android:textColor="#999"
+                android:textSize="@dimen/textSize14"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/search_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/backgroundf1f1f1"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="最佳匹配结果"
+                android:textSize="@dimen/textSize14"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/view"/>
+
+            <ListView
+                android:id="@+id/issearch_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

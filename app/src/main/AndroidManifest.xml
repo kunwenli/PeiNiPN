@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.jsz.peini">
+
+    <meta-data
+        android:name="design_width"
+        android:value="750"/>
+    <meta-data
+        android:name="design_height"
+        android:value="1334"/>
+
+    <!-- 环信所需权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 添加可以向外拨打电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- //百度地图的权限 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!--个推权限-->
+    <!-- iBeancon功能所需权限 -->;
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:name=".PeiNiApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launchers"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--友盟的-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5836f145f5ade450a8000aef"/>
+        <!--百度的-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="b8Xg3fYGR5Ma9MGOmsRGia3PDnp4Df6f"/>
+
+        <activity
+            android:name=".ui.activity.home.HomeActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.activity.login.RegistActivity"/>
+        <activity android:name=".ui.activity.GuideActivity"/>
+        <activity android:name=".ui.activity.AdvertisementActivity"/>
+        <activity
+            android:name=".ui.activity.login.IsLoginActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.activity.login.LoginActivity"/>
+        <activity android:name=".ui.activity.login.ServiceActivity"/>
+        <activity android:name=".ui.activity.login.password.FindPasswordActivity"/>
+        <activity android:name=".ui.activity.login.password.RemountActivity"/>
+        <activity android:name=".ui.activity.seller.SellerMessageActivity"/>
+        <activity android:name=".ui.activity.report.ReportActivity"/>
+        <activity
+            android:name=".ui.activity.pay.PaythebillActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.filter.FilterActivity"/>
+        <activity android:name=".ui.activity.pay.PaySuccess"/>
+        <activity android:name=".ui.activity.news.MapNewsActivity"/>
+        <activity android:name=".ui.activity.task.TaskDtailsActivity"/>
+        <activity android:name=".ui.activity.search.IsSearchActivity"/>
+        <activity android:name=".ui.activity.login.san.SanPhoneActivity"/>
+        <activity android:name=".ui.activity.login.san.SanPhoneNextActivity"/>
+        <activity android:name=".ui.activity.news.SettingNesActivity"/>
+        <activity android:name=".ui.activity.task.TaskCancelActivity"/>
+        <activity android:name=".ui.activity.seller.CouponActivity"/>
+        <activity android:name=".ui.activity.setting.AboutUsActivity"/>
+        <activity android:name=".ui.activity.setting.LoginPasswordActivity"/>
+        <activity android:name=".ui.activity.setting.PayPasswordActivity"/>
+        <activity android:name=".ui.activity.setting.IdeaActivity"/>
+        <activity android:name=".ui.activity.task.TaskActivity"/>
+        <activity android:name=".ui.activity.ShareActivity"/>
+        <activity android:name=".ui.activity.task.SellerSuccessPingjia"/>
+        <activity android:name=".ui.activity.setting.GesturePasswordActivity"/>
+        <activity android:name=".ui.activity.setting.SetPassword"/>
+        <activity android:name=".ui.activity.setting.MerchantsSettledActivity"/>
+        <activity android:name=".ui.activity.search.SellerTabulation"/>
+        <activity android:name=".ui.activity.task.TaskReportActivity"/>
+        <activity android:name=".ui.activity.square.HideActivity"/>
+        <activity android:name=".ui.activity.square.PhotoView"/>
+        <activity android:name=".ui.activity.square.SuareReleaseActivity"/>
+        <activity android:name=".ui.activity.square.SquarePeriphery"/>
+        <activity android:name=".ui.activity.square.MiSquareActivity"/>
+        <activity android:name=".ui.activity.square.TaSquareActivity"/>
+        <activity android:name=".ui.activity.news.FansActivity"/>
+        <activity android:name=".ui.activity.square.IdentityAuthenticationActivity"/>
+        <activity android:name=".ui.activity.square.PhoneAuthenticationActivity"/>
+        <activity android:name=".ui.activity.square.MyWealthActivity"/>
+        <activity android:name=".ui.activity.square.RechargeActivity"/>
+        <activity android:name=".ui.activity.square.TaSquareMessageActivity"/>
+        <activity android:name=".ui.activity.square.AlbumManagementActivity"/>
+        <activity android:name=".ui.activity.square.AddImagePhotoActivity"/>
+        <activity android:name=".ui.activity.square.BillActivity"/>
+        <activity android:name=".ui.activity.seephoto.SeePhotoActivity"/>
+        <activity android:name=".ui.activity.task.SelectSellerActivity"/>
+        <activity android:name=".ui.activity.setting.ResetPasswordActivity"/>
+        <activity android:name=".ui.activity.LockActivity"/>
+        <activity android:name=".ui.activity.setting.UpdataPasswordActivity"/>
+        <activity android:name=".ui.activity.square.MyCreditActivity"/>
+        <activity android:name=".ui.activity.square.IntegralActivity"/>
+        <activity android:name=".ui.activity.square.IntegralActivityNext"/>
+        <activity android:name=".ui.activity.square.IntegraHelpActivity"/>
+        <activity android:name=".ui.activity.square.IntegralDetailActivity"/>
+        <activity android:name=".ui.activity.square.IntegralMessageActivity"/>
+        <activity android:name=".ui.activity.task.MoreTaskActivity"/>
+        <activity android:name=".ui.activity.square.MyBackgroundActivity"/>
+        <activity android:name=".ui.activity.square.MiTaskActivity"/>
+        <activity android:name=".ui.fragment.news.ChatActivity"/>
+        <activity android:name=".ui.activity.square.NickNameActivity"/>
+        <activity android:name=".ui.activity.square.TaTaskActivity"/>
+        <activity android:name=".ui.activity.square.TaPhotoImageActivity"/>
+        <activity android:name=".ui.activity.square.TaSquareHomepageActivity"/>
+        <activity android:name=".ui.activity.square.MiSquareHomepageActivity"/>
+        <activity android:name=".ui.activity.square.MiLabelActivity"/>
+        <activity android:name=".ui.activity.square.MiSignActivity"/>
+        <activity android:name=".ui.activity.square.MiCouponActivity"/>
+        <activity android:name=".ui.activity.square.MiBeOverdueCouponActivity"/>
+        <activity android:name=".ui.activity.filter.TaskSearchActivity"/>
+        <activity android:name=".san.huanxin.activity.ChatHuanXinActivity"/>
+        <activity
+            android:name=".ui.activity.TaskMessageActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".ui.view.ImageSelector.ImgSelActivity"/>
+        <!--*悬浮窗按钮-->
+        <service android:name=".service.FloatViewService"/>
+
+        <service android:name=".SplashService"/>
+        <!--支付宝-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!--  微信支付-->
+        <!--这个intent-filter不要忘了-->
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wx4a856dc3b666fe4d"/>
+            </intent-filter>
+        </activity>
+        <!-- QQ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent100424468"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- 微博 -->
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false"/>
+        <!-- 华丽的分割线华丽的分割线华丽的分割线华丽的分割线华丽的分割线华丽的分割线华丽的分割线华丽的分割线华丽的分割线 -->
+        <!-- 分享界面编辑 -->
+        <!-- <activity -->
+        <!-- android:name="com.umeng.socialize.editorpage.ShareActivity" -->
+        <!-- android:excludeFromRecents="true" -->
+        <!-- android:theme="@style/Theme.UMDefault" /> -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+
+        <!--个推-->
+        <service
+            android:name=".san.getui.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice">
+        </service>
+
+        <service android:name=".san.getui.IntentService"/>
+
+        <!--环信-->
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1156161025178933#peoplenearby"/>
+        <!--查看大图-->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"/>
+        <!-- 地图 -->
+        <!--<activity-->
+            <!--android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/horizontal_slide"/>-->
+
+        <!-- 声明SDK所需的service SDK核心功能-->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"/>
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

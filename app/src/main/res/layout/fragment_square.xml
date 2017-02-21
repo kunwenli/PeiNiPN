@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/square_swipetoloadlayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/recyclerview"/>
+
+    <LinearLayout
+        android:id="@+id/square_input"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white000"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/square_input_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/huifu_bj"
+            android:gravity="center_vertical"
+            android:hint="回复"
+            android:paddingLeft="5dp"
+            android:textColor="#333"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/textSize15"/>
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:padding="6dp">
+
+            <Button
+                android:id="@+id/square_send"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_red"
+                android:text="发送"
+                android:textColor="@color/white000"
+                android:textSize="@dimen/textSize16"/>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

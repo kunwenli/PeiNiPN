@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white000"
+              android:orientation="vertical"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/square_imageead"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:clickable="true"
+            android:src="@mipmap/ic_launchers"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/square_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:text="赵亚坤"
+                android:textColor="#274b90"
+                android:textSize="@dimen/textSize16"/>
+
+            <com.jsz.peini.ui.view.square.SquareTextView
+                android:id="@+id/square_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="      奢姿魅韵腮红，苹果肌色、薰衣草色、蔷薇粉色、波斯菊色，色可选，粉质细腻持久值得一说的是薰衣草色，很多人会觉得它难驾驭，恰恰不是，在色环图中, 紫色与黄色互补，同时紫色属于偏冷色调，可以修饰我们的偏黄肤色，创造透明感的好肤质，显得像自然好气色般，更增添柔和浪漫感"
+                android:textColor="#333"
+                android:textSize="@dimen/textSize16"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/square_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:visibility="visible"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/square_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="法国 * 巴黎"
+                    android:textColor="#999"
+                    android:textSize="@dimen/textSize14"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/square_squareTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="2016年5月21日 上午 18:50"
+                        android:textColor="#999"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <TextView
+                        android:id="@+id/square_delete_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:clickable="true"
+                        android:text="删除"
+                        android:textColor="#274b96"
+                        android:textSize="@dimen/textSize14"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:id="@+id/square_button_zan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@mipmap/zan"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:gravity="center"
+                            android:text="赞"
+                            android:textSize="@dimen/textSize14"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/square_button_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@mipmap/pinglun"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:gravity="center"
+                            android:text="评论"
+                            android:textSize="@dimen/textSize14"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sq_bj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/sq_bj"
+                android:gravity="center|left"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/square_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/people_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:text="1人点赞"
+                        android:textColor="@color/text333"
+                        android:textSize="@dimen/textSize14"/>
+                </FrameLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/square_commentlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view"/>
+</LinearLayout>

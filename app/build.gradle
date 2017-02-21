@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.0.0'
+    }
+}
+greendao {
+    schemaVersion 1
+    daoPackage 'com.jsz.peini.gen'
+    targetGenDir 'src/main/java'
+}
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        resConfigs "zh"
+        applicationId "com.jsz.peini"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "DgmX1G4PPy8xo5ysuUa9r8",
+                GETUI_APP_KEY   : "6YLHyT0040AldPt78VEPj1",
+                GETUI_APP_SECRET: "tpb5OR2deh8w0otVsvmH96"
+        ]
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        compile 'com.android.support:appcompat-v7:25.1.1'
+        compile 'com.android.support:design:25.1.1'
+        testCompile 'junit:junit:4.12'
+        compile 'com.android.support:recyclerview-v7:25.1.1'
+        //6553
+        compile 'com.android.support:multidex:1.0.1'
+        //注解框架
+        compile 'com.jakewharton:butterknife:6.1.0'
+        compile 'de.hdodenhof:circleimageview:2.1.0'
+        compile 'liji.library.dev:circleimageview:0.1.0'
+        compile 'com.jude:rollviewpager:1.4.5'
+        //刷新列表
+        compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
+        compile 'com.wuxiaolong.pullloadmorerecyclerview:library:1.1.1'
+        //侧边栏的一些东西
+        compile project(':Sildinglibrary')
+        //环信
+        compile project(':easeUI_CN')
+        //viewpaget 列表的战士
+        compile 'com.zhy:magic-viewpager:1.0.1'
+        //Retrofit2所需要的包
+        compile 'com.squareup.retrofit2:retrofit:+'
+        compile 'com.squareup.retrofit2:converter-gson:+'
+        //适配 布局
+        compile 'com.zhy:autolayout:1.4.5'
+        //星星控件
+        compile 'com.xingliuhua:xlhratingbar_lib:1.0.1'
+        //流式布局
+        compile 'com.zhy:flowlayout-lib:1.0.3'
+
+        //数据库
+        compile 'org.greenrobot:greendao:3.0.1'
+        compile 'org.greenrobot:greendao-generator:3.0.0'
+        //联动列表
+        compile 'com.wx.wheelview:wheelview:1.3.3'
+        //图片的放大缩小
+        compile 'com.bm.photoview:library:1.4.1'
+        //数据传递
+        compile 'org.greenrobot:eventbus:3.0.0'
+        //万能的适配器
+        compile 'com.yuyh.easyadapter:library:1.0.0'
+        //个推
+        compile 'com.getui:sdk:2.9.5.0'
+        //侧拉删除
+        compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    }
+}

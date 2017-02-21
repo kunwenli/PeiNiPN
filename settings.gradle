@@ -1,0 +1,4 @@
+include ':app', ':Sildinglibrary'
+//, ':socialapp'
+//':app', ':Sildinglibrary',
+include ':easeUI_CN'

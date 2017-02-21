@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:zhy="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bj">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/taskdtails_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/task_more"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:clickable="true"
+            android:padding="5dp"
+            android:src="@mipmap/more"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="任务详情"
+            android:textColor="#333"
+            android:textSize="@dimen/textSize18"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/view"/>
+
+    <FrameLayout
+        android:id="@+id/task_isshow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/task_vp"
+                android:layout_width="match_parent"
+                android:layout_height="235dp"
+                app:rollviewpager_play_delay="3000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/task_icen"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white0000000"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="赵亚坤Android"
+                            android:textColor="#333"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <TextView
+                            android:id="@+id/task_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center_vertical"
+                            android:text="1.6km"
+                            android:textColor="#9a9a9a"
+                            android:textSize="@dimen/textSize10"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="9dp"
+                            android:layout_toRightOf="@+id/name"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/task_sex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/nan"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@id/task_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="26"
+                                android:textColor="#28c7dd"
+                                android:textSize="@dimen/textSize15"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tabuiation_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="信誉度:"
+                            android:textColor="#9a9a9a"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <TextView
+                            android:id="@+id/task_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center_vertical"
+                            android:text="我来买单"
+                            android:textColor="#fa4e31"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <TextView
+                            android:id="@+id/task_reputation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tabuiation_credit"
+                            android:gravity="center_vertical"
+                            android:text="99"
+                            android:textColor="#9a9a9a"
+                            android:textSize="@dimen/textSize15"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/view"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/filter_flowlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    zhy:auto_select_effect="false"
+                    zhy:max_select="-1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="业态 · "
+                        android:textColor="#999999"
+                        android:textSize="@dimen/textSize16"/>
+
+                    <TextView
+                        android:id="@+id/task_labelsname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="餐饮"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/textSize16"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="地点 · "
+                        android:textColor="#999999"
+                        android:textSize="@dimen/textSize16"/>
+
+                    <TextView
+                        android:id="@+id/task_map"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="海底捞 (王府井店)"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/textSize16"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="时间 · "
+                        android:textColor="#999999"
+                        android:textSize="@dimen/textSize16"/>
+
+                    <TextView
+                        android:id="@+id/task_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今天 18:00"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/textSize16"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="出行 · "
+                        android:textColor="#999999"
+                        android:textSize="@dimen/textSize16"/>
+
+                    <TextView
+                        android:id="@+id/task_laijiwwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="来接我"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/textSize16"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/view"/>
+
+            <TextView
+                android:id="@+id/task_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="      你好,陪你欢迎你"
+                android:textColor="#333333"
+                android:textSize="@dimen/textSize16"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/task_mejoin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fa4f30"
+            android:text="我要参加"
+            android:textColor="#fff"
+            android:textSize="@dimen/textSize16"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/task_linear1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/task_youjoin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#ccc"
+                android:text="(对方买单)"
+                android:textColor="#fff"
+                android:textSize="@dimen/textSize16"/>
+
+            <Button
+                android:id="@+id/task_telephone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#fcad31"
+                android:text="联系Ta"
+                android:textColor="#fff"
+                android:textSize="@dimen/textSize16"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/task_linear3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/task_mi_pay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/RED_FB4E30"
+                android:text="我来买单"
+                android:textColor="#fff"
+                android:textSize="@dimen/textSize16"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#fcad31"
+                android:text="联系Ta"
+                android:textColor="#fff"
+                android:textSize="@dimen/textSize16"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/task_linear2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#fa4f30"
+                android:text="再来一单"
+                android:textColor="#fff"
+                android:textSize="@dimen/textSize16"/>
+
+            <Button
+                android:id="@+id/seller_success_pingjia"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#fcad31"
+                android:text="去评价"
+                android:textColor="#fff"
+                android:textSize="@dimen/textSize16"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

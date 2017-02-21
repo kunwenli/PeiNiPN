@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/activity_advertisement"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white000"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/mywealth"
+            android:clickable="true"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/guide_bt_tiaochu"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_4circular_bj"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="跳过"
+            android:textColor="#fff"
+            android:textSize="@dimen/textSize14"/>
+    </FrameLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/adv_ad"/>
+</LinearLayout>
