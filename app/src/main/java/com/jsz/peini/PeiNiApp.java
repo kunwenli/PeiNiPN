@@ -24,7 +24,7 @@ import java.io.File;
  * Created by jinshouzhi on 2016/11/25.
  */
 
-public class PeiNiApp extends MultiDexApplication {
+public class PeiNiApp extends MultiDexApplication{
     public int count = 0;
     public static Context context = null;
     /**
